@@ -4,30 +4,56 @@
 - 2409116028
 - SISTEM INFORMASI A`24
 
-## 1. Halaman Produk
+## Deskripsi Aplikasi
 
-<img width="325" height="700" alt="image" src="https://github.com/user-attachments/assets/407ff877-d9ae-44dd-bfb9-10523fd4912f" />
+Aplikasi yang saya buat bertema Daftar Belanja. Aplikasi ini digunakan untuk membantu pengguna mencatat barang-barang yang ingin dibeli agar tidak lupa saat berbelanja.
 
-Ini halaman awal yang isinya daftar barang yang dijual.
+Di dalam aplikasi ini, pengguna bisa menambahkan data barang berupa nama barang, jumlah, dan kategori. Semua data yang sudah dimasukkan akan langsung tampil di halaman utama dalam bentuk daftar.
 
-Barangnya ditampilkan dalam bentuk kotak-kotak (grid).
-Setiap kotak ada:
+Aplikasi ini dibuat menggunakan Flutter dan terdiri dari beberapa file utama, yaitu:
 
-- Gambar produk
-- Nama produk
-- Harga
-- Tombol “Add”
+- main.dart sebagai file utama untuk menjalankan aplikasi,
+- HomePage untuk menampilkan daftar barang,
+- FormPage untuk menambahkan atau mengedit data,
+- dan ShoppingItem sebagai model untuk menyimpan struktur data barang.
 
-Kalau tombol Add ditekan, barang itu langsung masuk ke keranjang.
+## Fitur Aplikasi
 
-Produk yang ada:
+Beberapa fitur yang tersedia dalam aplikasi ini antara lain:
 
-- Laptop Gaming
-- Smartphone Pro
-- Wireless Headphones
-- Smart Watch
-- Camera DSLR
-- Tablet Pro
+1. Menambahkan Barang
+Pengguna dapat menekan tombol tambah (+) di pojok kanan bawah untuk masuk ke halaman form. Setelah mengisi semua data dan menekan tombol simpan, data akan langsung muncul di halaman utama.
+2. Menampilkan Daftar Barang
+Semua barang yang sudah ditambahkan akan ditampilkan dalam bentuk list. Setiap item menampilkan nama barang, jumlah, dan kategori.
+3. Mengedit Barang
+Jika ingin mengubah data, pengguna bisa menekan ikon edit pada item tertentu. Data lama akan otomatis muncul di form, lalu bisa diperbarui dan disimpan kembali.
+4. Menghapus Barang
+Pengguna juga bisa menghapus data dengan menekan ikon delete. Data akan langsung hilang dari daftar.
+
+# Widget yang Digunakan
+
+Dalam pembuatan aplikasi ini, saya menggunakan beberapa widget utama dari Flutter, seperti:
+
+- MaterialApp untuk mengatur struktur dasar aplikasi.
+- Scaffold sebagai kerangka tampilan halaman.
+- AppBar untuk menampilkan judul aplikasi.
+- ListView.builder untuk menampilkan daftar barang secara dinamis.
+- Card dan ListTile untuk menampilkan setiap item agar terlihat rapi.
+- TextField untuk input data di halaman form.
+- ElevatedButton sebagai tombol simpan.
+- FloatingActionButton untuk tombol tambah barang.
+- Get.to() untuk berpindah halaman.
+- Get.back() untuk kembali ke halaman sebelumnya sekaligus mengirim data.
+- setState() untuk memperbarui tampilan ketika data berubah
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+
+## 1. Halaman beranda
+
+<img width="324" height="698" alt="image" src="https://github.com/user-attachments/assets/8b0f529f-1c84-4206-a225-f4c1aaed134a" />
+
+. 
 
 ---------------------------------------------------------------------------------------------------------------------------------------
 
@@ -35,23 +61,7 @@ Produk yang ada:
 
 <img width="325" height="699" alt="image" src="https://github.com/user-attachments/assets/ff5c7205-7a24-442b-a185-f5fcc0bde5ce" />
 
-Ini halaman keranjang setelah kita nambah barang.
-
-Di sini cuma ada Laptop Gaming dan jumlahnya 3 buah.
-
-Karena satu laptop harganya 15 juta, dan kita ambil 3, jadi totalnya:
-
-15 juta × 3 = 45 juta
-
-Di samping jumlah ada:
-
-- Tombol - buat ngurangin
-- Tombol + buat nambahin
-- Ikon tempat sampah buat hapus barang
-
-Di bawah ada total belanja dan tombol Checkout.
-
-Artinya di tahap ini user baru beli satu jenis barang, tapi jumlahnya banyak.
+.
 
 ---------------------------------------------------------------------------------------------------------------------------------------
 
@@ -60,24 +70,7 @@ Artinya di tahap ini user baru beli satu jenis barang, tapi jumlahnya banyak.
 
 <img width="325" height="697" alt="image" src="https://github.com/user-attachments/assets/4787fcec-4ad6-4610-a525-ea83370e5844" />
 
-Ini masih halaman keranjang, tapi sekarang ada 2 jenis barang:
-
-- Laptop Gaming (3 buah)
-- Smartphone Pro (1 buah)
-
-Totalnya jadi:
-
-- Laptop: 45 juta
-- Smartphone: 800 ribu
-- Jadi total semua: 53 juta
-
-Di bagian bawah totalnya otomatis berubah jadi 53 juta.
-
-Artinya sistemnya sudah bisa:
-
-- Menyimpan lebih dari satu barang
-- Menghitung total otomatis
-- Update total kalau ada perubahan
+.
 
 ---------------------------------------------------------------------------------------------------------------------------------------
 
@@ -86,29 +79,7 @@ Artinya sistemnya sudah bisa:
 
 <img width="319" height="698" alt="image" src="https://github.com/user-attachments/assets/66b78559-55c1-49bf-87bc-5fcfaaf7cb41" />
 
-Di sini ada 2 produk dalam keranjang:
-
-1. Laptop Gaming
-- Jumlah: 3
-- Total: Rp 45.000.000
-
-2. Smartphone Pro
-
-- Jumlah: 5
-- Total: Rp 40.000.000
-
-Jadi total keseluruhan di bawah:
-Rp 85.000.000
-
-Karena:
-- 45 juta (laptop)
-- 40 juta (smartphone)
-- = 85 juta
-
-Di setiap produk ada:
-- Tombol - buat ngurangin jumlah
-- Tombol + buat nambahin jumlah
-- Ikon tempat sampah buat hapus satu produk
+.
 
 ---------------------------------------------------------------------------------------------------------------------------------------
 
@@ -116,19 +87,7 @@ Di setiap produk ada:
 
 <img width="323" height="696" alt="image" src="https://github.com/user-attachments/assets/c35d9849-c369-41cc-9c84-512ec78716b2" />
 
-Di gambar ini jumlahnya sudah berubah:
-- Laptop Gaming → jadi 1
-- Smartphone Pro → jadi 1
-
-Totalnya sekarang:
-Rp 23.000.000
-
-Karena:
-- 15 juta (1 laptop)
-- 8 juta (1 smartphone)
-- = 23 juta
-
-Artinya tombol -  berfungsi dan total otomatis ikut berubah.
+.
 
 ---------------------------------------------------------------------------------------------------------------------------------------
 
@@ -136,14 +95,7 @@ Artinya tombol -  berfungsi dan total otomatis ikut berubah.
 
 <img width="323" height="699" alt="image" src="https://github.com/user-attachments/assets/06543e7f-5d02-46e5-bf01-3374bd89002e" />
 
-Di halaman ini muncul pop-up:
-
-“Clear Cart?”
-“Remove all items from cart?”
-
-Ada 2 pilihan:
-- Cancel → batal hapus
-- Clear → hapus semua barang
+.
 
 ---------------------------------------------------------------------------------------------------------------------------------------
 
@@ -152,17 +104,7 @@ Ada 2 pilihan:
 
 <img width="322" height="702" alt="image" src="https://github.com/user-attachments/assets/89aa7b2a-2aae-4b94-991f-5b2d6867eabf" />
 
-Setelah tekan Clear, semua item hilang.
-
-Muncul tampilan:
-
-  “Your cart is empty”
-
-Ada tombol:
-
-  Continue Shopping
-
-Artinya sistem berhasil mengosongkan keranjang dan menampilkan empty state.
+.
 
 ---------------------------------------------------------------------------------------------------------------------------------------
 
@@ -170,8 +112,5 @@ Artinya sistem berhasil mengosongkan keranjang dan menampilkan empty state.
 
 <img width="324" height="702" alt="image" src="https://github.com/user-attachments/assets/ac8bffcc-f545-4cf1-883c-075fda9ac69e" />
 
-User tekan Continue Shopping dan balik ke halaman produk.
-
-Siklus belanja bisa dimulai lagi dari awal.
-
+.
 ---------------------------------------------------------------------------------------------------------------------------------------
