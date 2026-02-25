@@ -49,68 +49,121 @@ Dalam pembuatan aplikasi ini, saya menggunakan beberapa widget utama dari Flutte
 ---------------------------------------------------------------------------------------------------------------------------------------
 
 
-## 1. Halaman beranda
+## 1. Tampilan beranda
 
 <img width="324" height="698" alt="image" src="https://github.com/user-attachments/assets/8b0f529f-1c84-4206-a225-f4c1aaed134a" />
 
-. 
+Ini adalah halaman pertama yang muncul saat aplikasi dibuka. Bisa dibilang ini adalah pusat dari aplikasi.
+
+Di bagian atas ada judul “Daftar Belanja” yang menandakan bahwa ini adalah halaman utama.
+Di bagian tengah terlihat tulisan “Belum ada daftar belanja”. Tulisan ini muncul karena memang belum ada data yang ditambahkan. Jadi aplikasi memberi tahu pengguna bahwa daftar masih kosong.
+
+Di pojok kanan bawah ada tombol (+).
+Tombol ini berfungsi untuk menambahkan barang baru. Ketika ditekan, pengguna akan diarahkan ke halaman form.
+
+Kalau nantinya sudah ada data, maka tulisan “Belum ada daftar belanja” akan hilang dan diganti dengan daftar barang yang sudah dimasukkan. Setiap barang nantinya bisa diedit atau dihapus.
+
+Intinya, halaman ini berfungsi untuk:
+- Melihat daftar barang
+- Menghapus barang
+- Mengedit barang
+- Masuk ke halaman tambah barang
 
 ---------------------------------------------------------------------------------------------------------------------------------------
 
-## 2. Halaman Keranjang (1 Produk)
 
-<img width="325" height="699" alt="image" src="https://github.com/user-attachments/assets/ff5c7205-7a24-442b-a185-f5fcc0bde5ce" />
+# 2. Tampilan ketika ingin melakukan proses penginputan daftar belanja
 
-.
+<img width="324" height="699" alt="image" src="https://github.com/user-attachments/assets/03cf2ecf-c250-43bc-9957-78619d4dc0fc" />
 
----------------------------------------------------------------------------------------------------------------------------------------
+Halaman ini muncul ketika tombol (+) ditekan.
 
-## 3. Halaman Keranjang (2 Produk)
+Di bagian atas ada judul “Tambah Barang” dan tombol panah kembali. Tombol panah ini bisa digunakan kalau pengguna ingin kembali tanpa menyimpan data.
 
+Di bagian tengah ada tiga kolom input:
+- Nama Barang
+- Jumlah Barang
+- Kategori
 
-<img width="325" height="697" alt="image" src="https://github.com/user-attachments/assets/4787fcec-4ad6-4610-a525-ea83370e5844" />
+Di bawahnya ada tombol Simpan.
 
-.
+Pada gambar ini, semua kolom masih kosong. Artinya pengguna belum mengisi data apa pun.
 
----------------------------------------------------------------------------------------------------------------------------------------
-
-## 4. Halaman Keranjang dengan Banyak jumlah di masing"itemnya
-
-
-<img width="319" height="698" alt="image" src="https://github.com/user-attachments/assets/66b78559-55c1-49bf-87bc-5fcfaaf7cb41" />
-
-.
+Kalau tombol Simpan ditekan dalam kondisi kosong, aplikasi tidak akan menyimpan data. 
 
 ---------------------------------------------------------------------------------------------------------------------------------------
 
-## 5. Halaman kuantitas item Dikurangi
+# 3. TAmpilan saat melakukan penginputan daftar belanja
 
-<img width="323" height="696" alt="image" src="https://github.com/user-attachments/assets/c35d9849-c369-41cc-9c84-512ec78716b2" />
+<img width="320" height="699" alt="image" src="https://github.com/user-attachments/assets/cae842c3-5eb4-4823-b9f9-c865d9803f8b" />
 
-.
+Tampilan ini masih merupakan halaman yang sama dengan tampilan sebelumnya, tetapi dalam kondisi data sudah diisi.
+
+Contohnya:
+- Nama Barang: sosis goreng
+- Jumlah Barang: 10
+- Kategori: makanan ringan
+
+Ini menunjukkan bahwa pengguna sudah memasukkan data ke dalam setiap kolom.
+
+Jika tombol Simpan ditekan:
+Data akan dikirim kembali ke halaman utama.
+Data tersebut akan langsung muncul dalam daftar belanja.
+Halaman akan kembali ke Home secara otomatis.
+
+
+<img width="320" height="698" alt="image" src="https://github.com/user-attachments/assets/0b31c6ce-72ef-4427-8170-06c96c96471a" />
+
+Setelah menekan tombol simpan maka Daftar Belanja sudah terisi satu data, yaitu sosis goreng.
+
+Apa yang dapat terlihat di halaman ini:
+- Judul halaman: Daftar Belanja
+- Satu kartu (card) berisi data barang
+- Tombol tambah (+) di pojok kanan bawah
+
+Informasi dalam kartu terdapat:
+- Nama barang
+- Jumlah barang
+- Kategori barang
+
+Contoh yang terlihat:
+- sosis goreng Jumlah: 10 | Kategori: makanan ringan
+
+Di sebelah kanan kartu ada dua ikon:
+
+pensil itu edit untuk mengubah data
+
+keranjang sampah itu hapus untuk menghapus data
+
+Tampilan halaman ini menunjukkan kondisi ketika pengguna baru menambahkan satu barang.
+
+---------------------------------------------------------------------------------------------------------------------------------------
+# 4.Tampilan Halaman daftar belanja yang telah ditambahkan
+
+<img width="323" height="697" alt="image" src="https://github.com/user-attachments/assets/72a5f0b1-e490-4c46-b4b8-cfe0992dcd95" />
+
+Tampilan halaman ini menunjukkan kondisi ketika pengguna telah menambahkan tiga barang.
+
+- sosis goreng
+- nasi goreng
+- thai tea
+
+Yang bisa diperhatikan:
+- Data ditampilkan berurutan dari atas ke bawah.
+- Tampilan tetap rapi dan konsisten.
+- Tombol tambah (+) tetap tersedia untuk menambahkan barang baru.
+- Semakin banyak data yang dimasukkan, daftar akan terus memanjang ke bawah.
 
 ---------------------------------------------------------------------------------------------------------------------------------------
 
-## 6. Halaman hapus semua produk?
-
-<img width="323" height="699" alt="image" src="https://github.com/user-attachments/assets/06543e7f-5d02-46e5-bf01-3374bd89002e" />
-
-.
-
----------------------------------------------------------------------------------------------------------------------------------------
-
-## 7. Halaman dengan keranjang kosong
+<img width="323" height="697" alt="image" src="https://github.com/user-attachments/assets/72a5f0b1-e490-4c46-b4b8-cfe0992dcd95" />
+<img width="323" height="701" alt="image" src="https://github.com/user-attachments/assets/c82fa118-bb4c-498b-8c74-e72857cf0617" />
+<img width="324" height="702" alt="image" src="https://github.com/user-attachments/assets/90b9e55c-43c2-4a67-bf1a-da3e270660ac" />
 
 
-<img width="322" height="702" alt="image" src="https://github.com/user-attachments/assets/89aa7b2a-2aae-4b94-991f-5b2d6867eabf" />
+<img width="324" height="702" alt="image" src="https://github.com/user-attachments/assets/90b9e55c-43c2-4a67-bf1a-da3e270660ac" />
+<img width="323" height="702" alt="image" src="https://github.com/user-attachments/assets/14b44e11-2a6c-42b9-a0e2-e4c596a1050f" />
 
-.
 
----------------------------------------------------------------------------------------------------------------------------------------
 
-## 8. Halaman utama
 
-<img width="324" height="702" alt="image" src="https://github.com/user-attachments/assets/ac8bffcc-f545-4cf1-883c-075fda9ac69e" />
-
-.
----------------------------------------------------------------------------------------------------------------------------------------
